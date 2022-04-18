@@ -88,28 +88,24 @@ const Login = ({ userlogin }) => {
 
           <div className="col-md-6 shadow p-3 rounded-3">
             <form onSubmit={submitHandler}>
-              <div class="mb-3 ">
-                <label for="username" class="form-label">
-                  Username
-                </label>
+              <div className="mb-3 ">
+                <label className="form-label">Username</label>
                 <input
                   type="text"
-                  class="form-control"
-                  id="email"
+                  className="form-control"
+                  id="username"
                   value={user.username}
                   name="username"
                   onChange={onChangeHandler}
                 />
                 <span style={{ color: 'red' }}>{error.usernameErr}</span>
               </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">
-                  Email address
-                </label>
+              <div className="mb-3">
+                <label className="form-label">Email address</label>
                 <input
                   type="text"
                   id="email"
-                  class="form-control"
+                  className="form-control"
                   value={user.email}
                   name="email"
                   onChange={(e) => {
@@ -119,13 +115,11 @@ const Login = ({ userlogin }) => {
                 />
                 <span style={{ color: 'red' }}>{error.emailErr}</span>
               </div>
-              <div class="mb-3">
-                <label for="password" class="form-label">
-                  Password
-                </label>
+              <div className="mb-3">
+                <label className="form-label">Password</label>
                 <input
                   type="password"
-                  class="form-control"
+                  className="form-control"
                   id="password"
                   value={user.password}
                   name="password"
@@ -137,7 +131,7 @@ const Login = ({ userlogin }) => {
                 <span style={{ color: 'red' }}>{error.passwordErr}</span>
               </div>
 
-              <button type="submit" class="btn btn-outline-dark">
+              <button type="submit" className="btn btn-outline-dark">
                 Submit
               </button>
             </form>
