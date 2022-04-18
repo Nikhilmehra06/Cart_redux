@@ -85,7 +85,7 @@ const Header = ({ cartItem }) => {
               ) : (
                 <Link to="/login" className="btn btn-sm btn-outline-dark">
                   <FiLogIn />
-                  Logins
+                  Login
                 </Link>
               )}
             </div>
