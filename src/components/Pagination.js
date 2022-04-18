@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Pagination = ({ pages, page, onChange }) => {
-  console.log('pages', pages);
   const pageNumber = [];
+
   for (let i = 1; i <= pages; i++) {
     pageNumber.push(
       <button

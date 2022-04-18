@@ -28,7 +28,6 @@ const Products = () => {
       >
         <div className="row">
           <div className="col-md-3">
-            {console.log(data)}
             <Sidebar data={data} setData={setData} product={product} />
           </div>
 

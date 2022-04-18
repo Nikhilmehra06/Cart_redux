@@ -18,10 +18,14 @@ const Header = ({ cartItem }) => {
     window.location.href = '/';
   };
 
+  const seachHandler = () => {
+    console.log('output from search Handler');
+  };
+
   const navLinkStyle = ({ isActive }) => {
     return {
       fontWeight: isActive ? 'bold' : 'normal',
-      textDecoration: isActive ? 'none' : 'underline',
+      textDecoration: isActive ? 'none' : ' ',
     };
   };
 
@@ -45,6 +49,17 @@ const Header = ({ cartItem }) => {
               </NavLink>
             </li>
           </ul>
+          {token && (
+            <form className="d-flex">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                onChange={seachHandler}
+              />
+            </form>
+          )}
+
           <IconContext.Provider value={{ size: '1rem' }}>
             <div className="buttons">
               <Link

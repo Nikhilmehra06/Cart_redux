@@ -18,7 +18,7 @@ const Sidebar = ({ setData, product }) => {
 
   const onchangeHandler = (e) => {
     let value = e.target.value;
-    console.log(filterArray);
+
     if (filterArray.includes(value)) {
       let arr = filterArray.filter((arr) => value !== arr);
       setFilterArray(arr);
@@ -31,18 +31,16 @@ const Sidebar = ({ setData, product }) => {
     <>
       {filterListData.map((item, id) => {
         return (
-          <>
-            <div className="form-check " key={id}>
-              <input
-                className="form-check-input"
-                type="checkbox"
-                name={item}
-                onChange={onchangeHandler}
-                value={item}
-              />
-              <label className="form-check-label">{item}</label>
-            </div>
-          </>
+          <div className="form-check " key={id}>
+            <input
+              className="form-check-input"
+              type="checkbox"
+              name={item}
+              onChange={onchangeHandler}
+              value={item}
+            />
+            <label className="form-check-label">{item}</label>
+          </div>
         );
       })}
     </>
